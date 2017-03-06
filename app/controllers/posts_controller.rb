@@ -37,7 +37,7 @@ class PostsController < ApplicationController
     @group = Group.find(params[:group_id])
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to group_path(group), alert: "Post Deleted"
+    redirect_to group_path(@group), alert: "Post Deleted"
   end
 
 
